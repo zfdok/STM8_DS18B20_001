@@ -26,8 +26,3 @@ int putchar(int ch)
 //---------------interrupt-----------------
 
 //-------------------------------------
-void delay(u16 Count)
-{
-  do{ }
-  while(Count--);
-}

@@ -15,7 +15,7 @@ void Welcome_Msg(void);
 //------------global----------------------
 char give_to_stm8;
 float temp;
-extern u8 wflag;
+extern u8 wflag; 
 //------------main------------------------
 void main( void )
 {

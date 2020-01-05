@@ -6,5 +6,3 @@
 
 void uart1_init(void);
 void uart1_sendByte(u8 data);
-
-void delay(u16 Count);

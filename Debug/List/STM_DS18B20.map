@@ -1,22 +1,22 @@
 ###############################################################################
 #
-# IAR ELF Linker V3.10.1.201 for STM8                     04/Jan/2020  21:42:29
+# IAR ELF Linker V3.10.1.201 for STM8                     05/Jan/2020  18:06:08
 # Copyright 2010-2017 IAR Systems AB.
 #
 #    Output file  =  
-#        C:\Users\Administrator\Desktop\stm8_learn\STM_DS18B20\Debug\Exe\STM_DS18B20.out
+#        C:\Users\Administrator\Desktop\stm8_learn\STM8_DS18B20_001\Debug\Exe\STM_DS18B20.out
 #    Map file     =  
-#        C:\Users\Administrator\Desktop\stm8_learn\STM_DS18B20\Debug\List\STM_DS18B20.map
+#        C:\Users\Administrator\Desktop\stm8_learn\STM8_DS18B20_001\Debug\List\STM_DS18B20.map
 #    Command line =  
-#        -f C:\Users\ADMINI~1\AppData\Local\Temp\EW4452.tmp
-#        (C:\Users\Administrator\Desktop\stm8_learn\STM_DS18B20\Debug\Obj\DS18B20.o
-#        C:\Users\Administrator\Desktop\stm8_learn\STM_DS18B20\Debug\Obj\main.o
-#        C:\Users\Administrator\Desktop\stm8_learn\STM_DS18B20\Debug\Obj\stm_init.o
-#        C:\Users\Administrator\Desktop\stm8_learn\STM_DS18B20\Debug\Obj\uart1.o
+#        -f C:\Users\ADMINI~1\AppData\Local\Temp\EWA327.tmp
+#        (C:\Users\Administrator\Desktop\stm8_learn\STM8_DS18B20_001\Debug\Obj\DS18B20.o
+#        C:\Users\Administrator\Desktop\stm8_learn\STM8_DS18B20_001\Debug\Obj\main.o
+#        C:\Users\Administrator\Desktop\stm8_learn\STM8_DS18B20_001\Debug\Obj\stm_init.o
+#        C:\Users\Administrator\Desktop\stm8_learn\STM8_DS18B20_001\Debug\Obj\uart1.o
 #        --redirect _Printf=_PrintfFullNoMb --redirect _Scanf=_ScanfFullNoMb -o
-#        C:\Users\Administrator\Desktop\stm8_learn\STM_DS18B20\Debug\Exe\STM_DS18B20.out
+#        C:\Users\Administrator\Desktop\stm8_learn\STM8_DS18B20_001\Debug\Exe\STM_DS18B20.out
 #        --map
-#        C:\Users\Administrator\Desktop\stm8_learn\STM_DS18B20\Debug\List\STM_DS18B20.map
+#        C:\Users\Administrator\Desktop\stm8_learn\STM8_DS18B20_001\Debug\List\STM_DS18B20.map
 #        --config "C:\Program Files (x86)\IAR Systems\Embedded Workbench
 #        8.0\stm8\config\lnkstm8s208mb.icf" --config_def _CSTACK_SIZE=0x100
 #        --config_def _HEAP_SIZE=0x100 --entry __iar_program_start --debug_lib)
@@ -163,7 +163,7 @@ Absolute sections, part 3 of 3:          0x7
   .near_func.text  ro code  0x009d81     0xb  xprintffull_nomb.o [4]
   .near_func.text  ro code  0x009d8c     0xb  xprintffull_nomb.o [4]
   .near_func.text  ro code  0x009d97     0xa  xprintffull_nomb.o [4]
-  .near_func.text  ro code  0x009da1     0x9  uart1.o [1]
+  .near_func.text  ro code  0x009da1     0x9  stm_init.o [1]
   .near_func.text  ro code  0x009daa     0x9  xprintffull_nomb.o [4]
   .near_func.text  ro code  0x009db3     0x9  xprintffull_nomb.o [4]
   .near_func.text  ro code  0x009dbc     0x9  xprintffull_nomb.o [4]
@@ -214,10 +214,11 @@ Zero (__iar_zero_init2)
     Module                 ro code  ro data  rw data  rw data
                                                        (abs)
     ------                 -------  -------  -------  -------
-C:\Users\Administrator\Desktop\stm8_learn\STM_DS18B20\Debug\Obj: [1]
+C:\Users\Administrator\Desktop\stm8_learn\STM8_DS18B20_001\Debug\Obj: [1]
     DS18B20.o                  502       17        7        5
     main.o                     195      132        5        1
-    uart1.o                     56                          7
+    stm_init.o                   9
+    uart1.o                     47                          7
     ---------------------------------------------------------
     Total:                     753      149       12       13
 
@@ -438,7 +439,7 @@ __intvec                0x008000         Data  Gb  interrupt.o [4]
 __low_level_init        0x009e38    0x3  Code  Gb  low_level_init.o [4]
 _exit                   0x009e1d         Code  Gb  cexit.o [4]
 _interrupt_20           0x0097e5         Code  Gb  main.o [1]
-delay                   0x009da1    0x9  Code  Gb  uart1.o [1]
+delay                   0x009da1    0x9  Code  Gb  stm_init.o [1]
 div                     0x009ad3   0x30  Code  Gb  div.o [4]
 exit                    0x009e3b    0x3  Code  Gb  exit.o [4]
 give_to_stm8            0x000017    0x1  Data  Gb  main.o [1]
@@ -457,7 +458,7 @@ uart1_sendByte          0x009c40   0x11  Code  Gb  uart1.o [1]
 wflag                   0x000016    0x1  Data  Gb  DS18B20.o [1]
 
 
-[1] = C:\Users\Administrator\Desktop\stm8_learn\STM_DS18B20\Debug\Obj
+[1] = C:\Users\Administrator\Desktop\stm8_learn\STM8_DS18B20_001\Debug\Obj
 [2] = command line
 [3] = dbgstm8smd.a
 [4] = dlstm8smn.a
