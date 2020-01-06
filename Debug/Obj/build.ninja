@@ -1,0 +1,35 @@
+#Generating source browse information for project STM_DS18B20
+
+
+#Abbreviations
+cc = C$:\Program$ Files$ (x86)\IAR$ Systems\Embedded$ Workbench$ 8.3\common\bin\SourceIndexer.exe
+ll = C$:\Program$ Files$ (x86)\IAR$ Systems\Embedded$ Workbench$ 8.3\common\bin\PbdLink.exe
+bd = C$:\Program$ Files$ (x86)\IAR$ Systems\Embedded$ Workbench$ 8.3\common\bin\makeBrowseData.exe
+
+
+
+#Rules
+rule index
+  depfile = $out.dep
+  command = $cc -out=$out -f $in
+rule link
+  command = $ll -M $out $in
+rule browsedata
+  command = $bd $in -output  $out
+
+
+
+#Build steps
+build DS18B20.pbi : index DS18B20.xcl
+build iic.pbi : index iic.xcl
+build main.pbi : index main.xcl
+build OLED12864.pbi : index OLED12864.xcl
+build stm_init.pbi : index stm_init.xcl
+build uart1.pbi : index uart1.xcl
+build STM_DS18B20_part0.pbi : link DS18B20.pbi iic.pbi
+build STM_DS18B20_part1.pbi : link main.pbi OLED12864.pbi
+build STM_DS18B20_part2.pbi : link stm_init.pbi uart1.pbi
+build STM_DS18B20.pbd : link STM_DS18B20_part0.pbi STM_DS18B20_part1.pbi STM_DS18B20_part2.pbi
+build STM_DS18B20.pbw : browsedata STM_DS18B20.pbd
+
+

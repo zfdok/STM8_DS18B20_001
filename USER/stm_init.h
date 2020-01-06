@@ -1,4 +1,5 @@
 #include "iostm8s208mb.h"
+#include <stdlib.h>
 
 typedef unsigned char uint8_t;
 typedef unsigned short uint16_t;
@@ -7,5 +8,5 @@ typedef unsigned long uint32_t;
 #define u16 uint16_t
 #define u32 uint32_t
 
-
-void delay(u16 Count);
+void delay(u16 count);
+void delayms(u16 count);
