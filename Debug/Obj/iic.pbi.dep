@@ -1,7 +1,6 @@
-iic.pbi: \
-  C:\Users\Administrator\Desktop\stm8_learn\STM8_DS18B20_001\USER\iic.c \
-  C:\Users\Administrator\Desktop\stm8_learn\STM8_DS18B20_001\USER/iic.h \
-  C:\Users\Administrator\Desktop\stm8_learn\STM8_DS18B20_001\USER/DS18B20.h \
+iic.pbi: C:\Users\16282\Desktop\STM8_DEMO\STM8_DS18B20_001\USER\iic.c \
+  C:\Users\16282\Desktop\STM8_DEMO\STM8_DS18B20_001\USER/iic.h \
+  C:\Users\16282\Desktop\STM8_DEMO\STM8_DS18B20_001\USER/DS18B20.h \
   C:\Program\ Files\ (x86)\IAR\ Systems\Embedded\ Workbench\ 8.3\stm8\inc\iostm8s208mb.h \
   C:\Program\ Files\ (x86)\IAR\ Systems\Embedded\ Workbench\ 8.3\stm8\inc/io_macros.h \
   C:\Program\ Files\ (x86)\IAR\ Systems\Embedded\ Workbench\ 8.3\stm8\inc\c\stdio.h \
@@ -14,6 +13,6 @@ iic.pbi: \
   C:\Program\ Files\ (x86)\IAR\ Systems\Embedded\ Workbench\ 8.3\stm8\inc\c\DLib_Threads.h \
   C:\Program\ Files\ (x86)\IAR\ Systems\Embedded\ Workbench\ 8.3\stm8\inc\c\ysizet.h \
   C:\Program\ Files\ (x86)\IAR\ Systems\Embedded\ Workbench\ 8.3\stm8\inc\c\ystdio.h \
-  C:\Users\Administrator\Desktop\stm8_learn\STM8_DS18B20_001\USER/uart1.h \
-  C:\Users\Administrator\Desktop\stm8_learn\STM8_DS18B20_001\USER/stm_init.h \
+  C:\Users\16282\Desktop\STM8_DEMO\STM8_DS18B20_001\USER/uart1.h \
+  C:\Users\16282\Desktop\STM8_DEMO\STM8_DS18B20_001\USER/stm_init.h \
   C:\Program\ Files\ (x86)\IAR\ Systems\Embedded\ Workbench\ 8.3\stm8\inc\c\stdlib.h

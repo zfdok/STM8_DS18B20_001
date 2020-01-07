@@ -1,14 +1,14 @@
-"C:\Users\Administrator\Desktop\stm8_learn\STM8_DS18B20_001\USER\iic.c"
+"C:\Users\16282\Desktop\STM8_DEMO\STM8_DS18B20_001\USER\iic.c"
 -std=c99
 -ferror-limit=0
 -fbracket-depth=512
 -MD
 -MF
-C:\Users\Administrator\Desktop\stm8_learn\STM8_DS18B20_001\Debug\Obj\iic.pbi.dep
+C:\Users\16282\Desktop\STM8_DEMO\STM8_DS18B20_001\Debug\Obj\iic.pbi.dep
 -o
 iic.pbi
 -I
-C:\Users\Administrator\Desktop\stm8_learn\STM8_DS18B20_001\USER
+C:\Users\16282\Desktop\STM8_DEMO\STM8_DS18B20_001\USER
 -I
 C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.3\stm8\inc
 -I

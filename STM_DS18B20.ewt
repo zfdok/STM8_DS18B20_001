@@ -2190,6 +2190,12 @@
             <name>$PROJ_DIR$\USER\stm_init.h</name>
         </file>
         <file>
+            <name>$PROJ_DIR$\USER\TIM4.c</name>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\USER\TIM4.h</name>
+        </file>
+        <file>
             <name>$PROJ_DIR$\USER\uart1.c</name>
         </file>
         <file>

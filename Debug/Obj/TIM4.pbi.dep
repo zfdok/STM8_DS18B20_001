@@ -1,5 +1,7 @@
-DS18B20.pbi: \
-  C:\Users\16282\Desktop\STM8_DEMO\STM8_DS18B20_001\USER\DS18B20.c \
+TIM4.pbi: C:\Users\16282\Desktop\STM8_DEMO\STM8_DS18B20_001\USER\TIM4.c \
+  C:\Users\16282\Desktop\STM8_DEMO\STM8_DS18B20_001\USER/tim4.h \
+  C:\Users\16282\Desktop\STM8_DEMO\STM8_DS18B20_001\USER/OLED12864.h \
+  C:\Users\16282\Desktop\STM8_DEMO\STM8_DS18B20_001\USER/iic.h \
   C:\Users\16282\Desktop\STM8_DEMO\STM8_DS18B20_001\USER/DS18B20.h \
   C:\Program\ Files\ (x86)\IAR\ Systems\Embedded\ Workbench\ 8.3\stm8\inc\iostm8s208mb.h \
   C:\Program\ Files\ (x86)\IAR\ Systems\Embedded\ Workbench\ 8.3\stm8\inc/io_macros.h \

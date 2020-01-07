@@ -1,6 +1,6 @@
 stm_init.pbi: \
-  C:\Users\Administrator\Desktop\stm8_learn\STM8_DS18B20_001\USER\stm_init.c \
-  C:\Users\Administrator\Desktop\stm8_learn\STM8_DS18B20_001\USER/stm_init.h \
+  C:\Users\16282\Desktop\STM8_DEMO\STM8_DS18B20_001\USER\stm_init.c \
+  C:\Users\16282\Desktop\STM8_DEMO\STM8_DS18B20_001\USER/stm_init.h \
   C:\Program\ Files\ (x86)\IAR\ Systems\Embedded\ Workbench\ 8.3\stm8\inc\iostm8s208mb.h \
   C:\Program\ Files\ (x86)\IAR\ Systems\Embedded\ Workbench\ 8.3\stm8\inc/io_macros.h \
   C:\Program\ Files\ (x86)\IAR\ Systems\Embedded\ Workbench\ 8.3\stm8\inc\c\stdlib.h \

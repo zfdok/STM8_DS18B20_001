@@ -1,12 +1,12 @@
-"C:\Users\16282\Desktop\STM8_DEMO\STM8_DS18B20_001\USER\main.c"
+"C:\Users\16282\Desktop\STM8_DEMO\STM8_DS18B20_001\USER\TIM4.c"
 -std=c99
 -ferror-limit=0
 -fbracket-depth=512
 -MD
 -MF
-C:\Users\16282\Desktop\STM8_DEMO\STM8_DS18B20_001\Debug\Obj\main.pbi.dep
+C:\Users\16282\Desktop\STM8_DEMO\STM8_DS18B20_001\Debug\Obj\TIM4.pbi.dep
 -o
-main.pbi
+TIM4.pbi
 -I
 C:\Users\16282\Desktop\STM8_DEMO\STM8_DS18B20_001\USER
 -I

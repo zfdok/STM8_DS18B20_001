@@ -197,17 +197,28 @@ void OLED_P32x32Ch(u8 x,u8 y,u8 N)
 		adder += 1;
 	}
 }
+void OLED_Welcome(void)
+{
+	OLED_init();
+	OLED_P8x16Str(72,0,"AL-201B");
+	OLED_P32x32Ch(0,2,2);
+	OLED_P32x32Ch(32,2,4);
+	OLED_P32x32Ch(64,2,6);
+	OLED_P32x32Ch(96,2,8);
+	OLED_P6x8Str(10,7,"www.anleng-tec.com");
+}
 void OLED_Display()
 {
 	OLED_init();
 	OLED_ChangeRightSatus(1);     	//判断本次货品合格性
 	OLED_ChangeBLESatus(1);	 		//蓝牙状态
 	OLED_P16x16Ch(32,0,12);			//是否记录中
+	OLED_P16x16Ch(48,0,22);			//是否记录中
 	OLED_ChangeTime(7,18); 		//默认时间7：18
-	OLED_ChangePowerSatus(0);		//电池电量百分比
+	OLED_ChangePowerSatus(40);		//电池电量百分比
 	OLED_ChangeTemp(0,0);   		//默认温度0.0
 	OLED_P32x32Ch(96,2,0); 			//℃
-	OLED_ChangeRECNum(125477);		//改变记录条数
+	OLED_ChangeRECNum(0);		//改变记录条数
     OLED_ChangeDate(2020,12,21);    //
 }
 void OLED_ChangeTemp(u8 under0,float temp)
@@ -228,11 +239,11 @@ void OLED_ChangeTemp(u8 under0,float temp)
 }
 void OLED_ChangeTime(u8 hour,u8 min)
 {
-	witeNum8X16(64,0,hour/10);
-	witeNum8X16(72,0,hour%10);
-	OLED_P8x16Str(80,0,":");
-	witeNum8X16(88,0,min/10);
-	witeNum8X16(94,0,min%10);
+	witeNum8X16(72,0,hour/10);
+	witeNum8X16(80,0,hour%10);
+	OLED_P8x16Str(88,0,":");
+	witeNum8X16(94,0,min/10);
+	witeNum8X16(102,0,min%10);
 }
 void OLED_ChangeDate(u16 year,u8 month,u8 day)
 {
@@ -247,7 +258,7 @@ void OLED_ChangeDate(u16 year,u8 month,u8 day)
 	witeNum6X8(110,7,day/10);
 	witeNum6X8(116,7,day%10);
 }
-void OLED_ChangeRECNum(long num)
+void OLED_ChangeRECNum(u32 num)
 {
 	if (num>99999)
 	{
@@ -334,7 +345,7 @@ void OLED_ChangePowerSatus(u8 percent)
 	}
 }
 void witeNum8X16(u8 x,u8 y,u8 num)
-{
+{       
 	OLED_SetPos(x,y);
 	for (u8 i = 0; i < 8; i++)
 	{
