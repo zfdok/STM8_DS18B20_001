@@ -2201,5 +2201,11 @@
         <file>
             <name>$PROJ_DIR$\USER\uart1.h</name>
         </file>
+        <file>
+            <name>$PROJ_DIR$\USER\W25Q64.c</name>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\USER\W25Q64.h</name>
+        </file>
     </group>
 </project>

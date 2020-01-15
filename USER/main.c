@@ -1,5 +1,4 @@
-#include "tim4.h"
-
+#include "W25Q64.h"
 #include "OLED_codeTab.h"
 //------------common-----------------------
 #ifndef u8
@@ -21,7 +20,7 @@ char give_to_stm8;
 float temp;
 extern u8 wflag; 
 u16 tim4_ms_count=0,tim4_sec_count=0;
-u32 rec_count = 0;
+long offset_now=0;
 //------------main------------------------
 void main( void )
 {
@@ -30,15 +29,18 @@ void main( void )
   uart1_init();
   I2C_init();
   TIM4_init();
+  SPI_FLASH_GPIO_Init();//配置SPI引脚模式及使能从机片选
+  SPI_CONFIG();//初始化SPI资源模块
   I2C_FindSlaver(0XA0);//AT24C02
   I2C_FindSlaver(0X78);//OLED12864
   Welcome_Msg();
   OLED_Welcome();
-  delayms(5000);
+  SPI_FLASH_ChipErase();//擦除整个FLASH芯片数据
+  delayms(3000);
   OLED_Display();
   asm("rim");
   TIM4_CR1 |=0x01;
-  
+
 }
 //------------funcs------------------------
 void Welcome_Msg(void)
@@ -123,7 +125,12 @@ __interrupt void UART1_RX_IRQHandler(void)
     break;
   case 'g':
     OLED_ChangePowerSatus(0);
-    break;   
+    break;
+  case 'h':
+    TIM4_CR1 &=0xFE;
+    TIM4_IER =0;
+    FLASH_Read_One_Process(offset_now);
+    break;  
   case 0:
     break;
   default:
@@ -165,9 +172,14 @@ __interrupt void TIM4_UPD_OVF_IRQHandler(void)
     {
       tim4_sec_count=0;
       //写入存储中
-      rec_count++;
-      OLED_ChangeRECNum(rec_count);
-      printf("1fenzhong le!\r\n");
+      FLASH_Write_TMP(200115,1150,!wflag,temp,offset_now);
+      offset_now +=18;
+      if (offset_now>180000)
+      {
+        offset_now=0;
+      }
+      OLED_ChangeRECNum(offset_now/18);
+      printf("一分钟了!\r\n");
     }
   }
 }

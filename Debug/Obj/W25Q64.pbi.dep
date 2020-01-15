@@ -1,5 +1,4 @@
-main.pbi: \
-  C:\Users\16282\Desktop\STM8_DEMO\STM8_DS18B20_001\USER\OLED_codeTab.h \
+W25Q64.pbi: \
   C:\Program\ Files\ (x86)\IAR\ Systems\Embedded\ Workbench\ 8.3\stm8\inc\c\ysizet.h \
   C:\Program\ Files\ (x86)\IAR\ Systems\Embedded\ Workbench\ 8.3\stm8\inc\c\ycheck.h \
   C:\Program\ Files\ (x86)\IAR\ Systems\Embedded\ Workbench\ 8.3\stm8\inc\c\stdlib.h \
@@ -19,4 +18,4 @@ main.pbi: \
   C:\Users\16282\Desktop\STM8_DEMO\STM8_DS18B20_001\USER\OLED12864.h \
   C:\Users\16282\Desktop\STM8_DEMO\STM8_DS18B20_001\USER\tim4.h \
   C:\Users\16282\Desktop\STM8_DEMO\STM8_DS18B20_001\USER\W25Q64.h \
-  C:\Users\16282\Desktop\STM8_DEMO\STM8_DS18B20_001\USER\main.c
+  C:\Users\16282\Desktop\STM8_DEMO\STM8_DS18B20_001\USER\W25Q64.c

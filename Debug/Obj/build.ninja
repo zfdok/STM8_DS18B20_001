@@ -27,9 +27,10 @@ build OLED12864.pbi : index OLED12864.xcl
 build stm_init.pbi : index stm_init.xcl
 build TIM4.pbi : index TIM4.xcl
 build uart1.pbi : index uart1.xcl
+build W25Q64.pbi : index W25Q64.xcl
 build STM_DS18B20_part0.pbi : link DS18B20.pbi iic.pbi main.pbi
 build STM_DS18B20_part1.pbi : link OLED12864.pbi stm_init.pbi TIM4.pbi
-build STM_DS18B20_part2.pbi : link uart1.pbi
+build STM_DS18B20_part2.pbi : link uart1.pbi W25Q64.pbi
 build STM_DS18B20.pbd : link STM_DS18B20_part0.pbi STM_DS18B20_part1.pbi STM_DS18B20_part2.pbi
 build STM_DS18B20.pbw : browsedata STM_DS18B20.pbd
 
